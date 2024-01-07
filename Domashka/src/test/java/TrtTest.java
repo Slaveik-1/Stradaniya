@@ -6,7 +6,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 
@@ -28,7 +27,7 @@ public class TrtTest {
         //Выбираем раздел товары
     }
 
-    @Test // Первый грустный тест
+    @Test (priority = 1)// Первый грустный тест
             void testOne() {
         WebElement box3 = driver.findElement(By.xpath("//*[text()='Добавить']"));
         box3.click();
@@ -49,7 +48,7 @@ public class TrtTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @Test // Второй грустный тест
+    @Test (priority = 2)// Второй грустный тест
             void testTwo() {
                 WebElement box8 = driver.findElement(By.xpath("//*[text()='Добавить']"));
                 box8.click();
