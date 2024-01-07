@@ -14,8 +14,8 @@ public class TrtTest {
 
     @BeforeTest
     public static void setUp() throws IOException, InterruptedException {
-        Runtime.getRuntime().exec("cmd /c start C:\\\"Working Project\"\\qualit-sandbox.jar");
-        Thread.sleep(10000);
+       // Runtime.getRuntime().exec("cmd /c start C:\\\"Working Project\"\\qualit-sandbox.jar");
+       // Thread.sleep(10000);
         //Включаем стенд , и ждём его запуска , без ожидания тесты не проходят из-за недоступности локалхоста
         driver = new ChromeDriver();   // Включаем наш хром драйвер
         driver.get("http://localhost:8080");  //Переходим по ссылке на стенд
